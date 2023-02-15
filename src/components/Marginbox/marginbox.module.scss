@@ -1,0 +1,11 @@
+.marginBox {
+    width: 1260px !important;
+    margin: 0px auto;
+}
+
+@media screen and (max-width: 1270px) {
+    .marginBox {
+        width: 95% !important;
+        margin: 0px auto;
+    }
+}

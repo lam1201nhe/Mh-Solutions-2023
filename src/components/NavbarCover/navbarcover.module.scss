@@ -1,0 +1,8 @@
+.cover {
+position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) -30%, rgba(255, 255, 255, 0.9) 195%);
+  //can watch the border of navigation
+  box-shadow: 0px 8px 40px rgba(91, 91, 91, 0.2);
+}

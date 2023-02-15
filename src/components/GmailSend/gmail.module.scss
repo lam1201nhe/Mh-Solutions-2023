@@ -1,0 +1,23 @@
+.gmail {
+    width: 297px;
+    .input {
+        border: none;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-weight: 400;
+        padding: 16px;
+        gap: 10px;
+
+    }
+
+    .button {
+        width: fit-content;
+        padding: 16px 24px;
+        font-family: 'Be Vietnam Pro', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #F9FAFB;
+        background-color: #FF4E16;
+        border: none;
+    }
+}

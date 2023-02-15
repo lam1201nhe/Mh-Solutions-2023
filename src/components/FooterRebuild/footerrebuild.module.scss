@@ -1,0 +1,172 @@
+@import '../../styles/variable.scss';
+
+.container {
+    background-color: $neutral-6;
+
+    .wrapperBox {
+        padding: 64px 0px;
+
+        .box {
+            display: flex;
+
+            .leftBox,
+            .rightBox,
+            .copyright,
+            .format,
+            .logo {
+                display: flex;
+            }
+
+            .leftBox {
+                width: 40%;
+
+                .logo {
+                    width: 55%;
+                }
+
+                .linkList {
+                    width: 45%;
+
+                }
+
+                .logo {
+                    flex-direction: column;
+                    gap: 32px;
+
+                    .copyright {
+                        gap: 9px;
+                        align-items: center;
+                    }
+                }
+
+                .linkList {
+                    .format {
+                        flex-direction: column;
+                        gap: 16px;
+
+
+                    }
+
+                    .fontLink {
+                        color: $neutral-1;
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 24px;
+                        letter-spacing: 1px;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+
+            .rightBox {
+                width: 60%;
+
+                .br {
+                display: none;
+                }
+
+                .location {
+                    width: 50%;
+                    gap: 8px;
+                }
+
+                .gmail {
+                    width: 40%;
+                    gap: 16px;
+                }
+
+                .spacebox {
+                    width: 10%;
+                }
+
+                .gmail,
+                .location {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .title {
+                    color: $neutral-1;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 1px;
+
+                }
+
+                .content {
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    letter-spacing: 0.5px;
+
+                }
+
+                .gmailbox {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .longPara {
+                    padding-left: 15px;
+                }
+
+
+
+            }
+
+
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .wrapperBox {
+        .box {
+            .spacebox {
+                display: none;
+            }
+            .location,
+            .gmail {
+                width: 50% !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .wrapperBox {
+        padding: 24px 0px !important; 
+        margin: 0px 40px !important;
+        .box {
+            flex-direction: column;
+            gap: 60px;
+
+            .leftBox,
+            .rightBox {
+                width: 100% !important;
+            }
+            .location,
+            .gmail,
+            .logo,
+            .linkList {
+                width: 50% !important;
+            }
+            .gmailbox {
+                justify-content: flex-start !important;
+            }
+            .longPara {
+                padding-left: 0px !important;
+            }
+
+            .br {
+                display: block !important;
+            }
+        }
+    }
+}

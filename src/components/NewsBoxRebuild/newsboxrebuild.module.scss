@@ -1,0 +1,126 @@
+.container {
+    background-color: #EDEDED;
+
+    .wrapperBox {
+        padding: 64px 0px;
+
+        h1 {
+            text-align: center;
+            padding-bottom: 48px;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 56px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .boxInside {
+            display: flex;
+            gap: 24px;
+
+
+            .leftBoxInside,
+            .rightBoxInside {
+                width: 50%;
+            }
+
+            .leftBoxInside {
+                height: 406px;
+
+                .img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .rightBoxInside {
+                height: 406px;
+                display: flex;
+                flex-direction: column;
+                gap: 23px;
+
+                .information {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+
+                    .title,
+                    .content {
+                        word-wrap: break-word;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+
+                    }
+
+                    .content {
+                        -webkit-line-clamp: 4;
+                        line-height: 20px;
+                        height: 80px;
+                        font-weight: 400;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                    }
+
+                    .title {
+                        -webkit-line-clamp: 2;
+                        line-height: 24px;
+                        height: 45px;
+                        font-weight: 700;
+                        font-size: 16px;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+
+                    .days {
+                        color: #888888;
+                        font-weight: 400;
+                        font-size: 14px;
+                        letter-spacing: 0.5px;
+                    }
+                }
+
+
+                .rightBoxInside_up,
+                .rightBoxInside_down {
+                    height: 47.5%;
+                    display: flex;
+                    gap: 12px;
+                }
+
+                .all {
+                    height: 5%;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .wrapperBox {
+        padding: 32px 0px !important;
+
+        h1 {
+            padding-bottom: 24px !important;
+            font-size: 20px !important;
+            line-height: 32px !important;
+        }
+        .boxInside {
+            flex-direction: column;
+
+            .rightBoxInside,
+            .leftBoxInside {
+                width: 100% !important;
+            }
+        }
+    }
+
+
+}

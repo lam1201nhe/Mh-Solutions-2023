@@ -1,0 +1,31 @@
+@import '../../styles/variable.scss';
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    
+
+    .navlist {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 33px;
+    }
+
+    .fontLink {
+        font-weight: 600;
+        line-height: 26px;
+        text-decoration: none;
+        color: $neutral-1;
+    }
+
+
+}
+
+@media screen and (max-width: 950px) {
+    .logo {
+        width: 60px !important;
+        height: 60px !important;
+    }
+}

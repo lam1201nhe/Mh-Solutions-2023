@@ -1,0 +1,19 @@
+@import "../../styles/variable.scss";
+
+.card {
+    width: 233px;
+    margin: 32px auto;
+    text-align: center;
+
+    .button {
+        margin: 40px auto 32px auto;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 2px;
+        border: none;
+    }
+}
+
+.card:hover {
+    color: $neutral-5;
+
+}

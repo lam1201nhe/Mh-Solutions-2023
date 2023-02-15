@@ -1,0 +1,53 @@
+@import "../../styles/variable.scss";
+
+.tinybox {
+    width: 297px;
+    height: 497px;
+    border: 0.5px solid $neutral-3;
+    margin: 0px 12px;
+    color: $neutral-1;
+    background: $neutral-5;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+
+        color: $neutral-5;
+        // background: linear-gradient(96.61deg, #FF4E16 2.13%, #FB6535 96.62%);
+        background: #FF6E31;
+
+
+        .slide {
+            display: none;
+        }
+
+        .content {
+            display: block;
+        }
+
+        .hr {
+            border: 0.5px solid $neutral-5;
+            margin: 32px auto;
+        }
+
+        .icon {
+            color: $neutral-5;
+
+        }
+    }
+}
+
+.content {
+    display: none;
+    text-align: center;
+}
+
+.hr {
+    border: none;
+    margin: 32px auto 0 auto;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    color: $primary-color;
+}

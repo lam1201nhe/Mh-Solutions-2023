@@ -1,0 +1,9 @@
+.slide {
+
+    @media screen and (max-width: 620px) {
+        .img{
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
