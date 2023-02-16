@@ -48,3 +48,66 @@ export const products = [
       src: "/img/fourth.png"
     }  
 ]
+
+export const partnerList = [
+    {
+        id: 1,
+        name: "auntieanne",
+        src: "img/doitac.png",
+    },
+    {
+        id: 2,
+        name: "boyte",
+        src: "img/boyte.png",
+    },
+    {
+        id: 3,
+        name: "amazon",
+        src: "img/amazon.png",
+    },
+    {
+        id: 4,
+        name: "phuyenyte",
+        src: "img/phuyenyte.png",
+    },
+    {
+        id: 5,
+        name: "edupia",
+        src: "img/edupia.png",
+    },
+    {
+        id: 6,
+        name: "osam",
+        src: "img/osam.png",
+    },
+    {
+        id: 7,
+        name: "sphacy",
+        src: "img/sphacy.png",
+    },
+    {
+        id: 8,
+        name: "viettel",
+        src: "img/viettel.png",
+    },
+    {
+        id: 9,
+        name: "vietsens",
+        src: "img/vietsens.png",
+    },
+    {
+        id: 10,
+        name: "mobifone",
+        src: "img/mobifone.png",
+    },
+    {
+        id: 11,
+        name: "mobifone",
+        src: "img/mb.png",
+    },
+    {
+        id: 12,
+        name: "senvang",
+        src: "img/senvang.png",
+    },
+]

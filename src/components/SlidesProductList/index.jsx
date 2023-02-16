@@ -1,47 +1,46 @@
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import styles from "./slidesproductlist.module.scss";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-import "swiper/css/free-mode";
-import "swiper/css/thumbs";
-import styles from "./slidesproductlist.module.scss";
+import "swiper/css/autoplay";
 
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { Navigation, Autoplay } from "swiper";
 
-const SlidesProductList = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+const SlidesPartner = () => {
   return (
-    <div >
+    <div>
       <Swiper
-        slidesPerView={1}
+        slidesPerView={2}
         spaceBetween={10}
         navigation={true}
         loop={true}
-        thumbs={{ swiper: thumbsSwiper }}
+        autoplay={true}
         breakpoints={{
-        //   567: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 90,
-        //   },
-        //   768: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 70,
-        //   },
-          1085: {
+          567: {
             slidesPerView: 3,
+            spaceBetween: 90,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 70,
+          },
+          1024: {
+            slidesPerView: 5,
             spaceBetween: 50,
           },
         }}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[ Navigation, Autoplay]}
         className={styles.slide}
       >
         <SwiperSlide>
           <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
         </SwiperSlide>
+        
         <SwiperSlide>
           <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/boyte.png" />
         </SwiperSlide>
@@ -50,6 +49,9 @@ const SlidesProductList = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/phuyenyte.png" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
         </SwiperSlide>
         <SwiperSlide>
           <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/edupia.png" />
@@ -63,7 +65,9 @@ const SlidesProductList = () => {
         <SwiperSlide>
           <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/vietsens.png" />
         </SwiperSlide>
-        
+        <SwiperSlide>
+          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
+        </SwiperSlide>
         
         
         
@@ -72,4 +76,4 @@ const SlidesProductList = () => {
   );
 };
 
-export default SlidesProductList;
+export default SlidesPartner;

@@ -1,0 +1,11 @@
+@import '../../styles/variable.scss';
+.wrapper {
+    display: flex;
+    gap:16px;
+
+    .icon {
+        width: 28px;
+        height: 28px;
+        color: $primary-color;
+    }
+}

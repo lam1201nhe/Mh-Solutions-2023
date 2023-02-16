@@ -1,25 +1,41 @@
-.middlebox{
+// Khong toi uu
+.middleBox {
     height: 492px;
-.boxinside {
-    width: 100%;
-    height: 252px;
 
-    .title {
-        margin-bottom: 80px;
-        
-        .bigFont {
-            font-family: 'Nunito Sans';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 40px;
-            line-height: 56px;
-            /* identical to box height, or 140% */
-            
-            text-align: center;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
+    .slidesMobile {
+        display: none;
     }
-    
+
+    .boxInside {
+        width: 100%;
+        height: 252px;
+
+        .title {
+            margin-bottom: 80px;
+
+            .bigFont {
+                font-family: 'Nunito Sans';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 40px;
+                line-height: 56px;
+                /* identical to box height, or 140% */
+
+                text-align: center;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
+        }
+
+    }
 }
+
+@media only screen and (max-width: 590px) {
+    .middleBox {
+        display: none !important;
+    }
+
+    .slidesMobile {
+        display: block !important;
+    }
 }

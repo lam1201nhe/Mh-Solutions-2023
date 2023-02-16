@@ -1,12 +1,14 @@
-import React from 'react'
-import MiddleBox from '../MiddleBox'
-import MarginBox from '../Marginbox'
-import styles from "./partnerbox.module.scss"
-import SlidesPartner from '../SlidesPartner'
+import React from "react";
+import MiddleBox from "../MiddleBox";
+import MarginBox from "../Marginbox";
+import styles from "./partnerbox.module.scss";
+import SlidesPartner from "../SlidesPartner";
+import SlidesPartnerMobile from "../SlidesPartnerMobile";
 const PartnerBox = () => {
   return (
-    <MiddleBox className={styles.middlebox}>
-        <MarginBox className={styles.boxinside}>
+    <div>
+      <MiddleBox className={styles.middleBox}>
+        <MarginBox className={styles.boxInside}>
           <div className={styles.title}>
             <p className={styles.bigFont}>Đối Tác</p>
           </div>
@@ -15,7 +17,9 @@ const PartnerBox = () => {
           </div>
         </MarginBox>
       </MiddleBox>
-  )
-}
+      <SlidesPartnerMobile className={styles.slidesMobile} />
+    </div>
+  );
+};
 
-export default PartnerBox
+export default PartnerBox;

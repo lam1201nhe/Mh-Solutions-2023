@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./slidespartner.module.scss";
@@ -10,6 +10,7 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Navigation, Autoplay } from "swiper";
+import { partnerList } from "@/documents";
 
 const SlidesPartner = () => {
   return (
@@ -34,43 +35,18 @@ const SlidesPartner = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[ Navigation, Autoplay]}
+        modules={[Navigation, Autoplay]}
         className={styles.slide}
       >
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/boyte.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/amazon.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/phuyenyte.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/edupia.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/osam.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/sphacy.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/vietsens.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        
-        
-        
+        {partnerList.map((item, index) => (
+          <SwiperSlide key={item.id}>
+            <img
+              className={styles.img}
+              style={{ width: "100%", objectFit: "contain" }}
+              src={item.src}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

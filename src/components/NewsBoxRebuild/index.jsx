@@ -15,7 +15,7 @@ const NewsBoxRebuild = () => {
             </div>
             <div className={styles.rightBoxInside}>
               <div className={styles.rightBoxInside_up}>
-                <img src="/img/newssecond.png" />
+                <img src="/img/newssecond.png" className={styles.img}/>
                 <div className={styles.information}>
                   <h3 className={styles.title}>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -33,7 +33,7 @@ const NewsBoxRebuild = () => {
                 </div>
               </div>
               <div className={styles.rightBoxInside_down}>
-                <img src="/img/newssecond.png" />
+                <img src="/img/newssecond.png" className={styles.img}/>
                 <div className={styles.information}>
                   <h3 className={styles.title}>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.

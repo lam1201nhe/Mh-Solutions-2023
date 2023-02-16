@@ -1,0 +1,29 @@
+@import '../../styles/variable.scss';
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $neutral-4;
+    padding-bottom: 24px;
+    margin-bottom: 16px;
+    .leftBox,
+    .rightBox {
+        display: flex;
+        flex-direction: column;
+    
+        .link {
+            text-decoration: none;
+            color: $neutral-1;
+            font-family: 'Nunito Sans';
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+    
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}

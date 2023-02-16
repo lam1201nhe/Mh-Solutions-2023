@@ -1,0 +1,17 @@
+@import '../../styles/variable.scss';
+
+.container {
+    background-color: $neutral-6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .wrapperBox {
+        padding: 32px 0px 16px 0px;        
+        
+        .footest {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}

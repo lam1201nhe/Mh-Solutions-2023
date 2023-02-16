@@ -26,7 +26,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slides paddingTop={styling} checkNav={false} />
-      <ProductBox items={data} />
+      {/* <ProductBox items={data} /> */}
       <NewsBoxRebuild />
       <PartnerBox />
     </>

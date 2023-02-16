@@ -6,4 +6,19 @@
     letter-spacing: 1.5px;
     font-style: normal;
     box-sizing: border-box;
+
+    .footerMobile {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .footerRebuild {
+        display: none !important;
+    }
+
+    .footerMobile {
+        display: block !important;
+    }
+    
 }

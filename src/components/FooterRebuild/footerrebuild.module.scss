@@ -6,6 +6,7 @@
     .wrapperBox {
         padding: 64px 0px;
 
+
         .box {
             display: flex;
 
@@ -64,10 +65,6 @@
             .rightBox {
                 width: 60%;
 
-                .br {
-                display: none;
-                }
-
                 .location {
                     width: 50%;
                     gap: 8px;
@@ -102,7 +99,7 @@
                     font-size: 14px;
                     line-height: 20px;
                     letter-spacing: 0.5px;
-
+                    max-width: 300px;
                 }
 
                 .gmailbox {
@@ -131,6 +128,7 @@
             .spacebox {
                 display: none;
             }
+
             .location,
             .gmail {
                 width: 50% !important;
@@ -141,8 +139,9 @@
 
 @media screen and (max-width: 950px) {
     .wrapperBox {
-        padding: 24px 0px !important; 
+        padding: 24px 0px !important;
         margin: 0px 40px !important;
+
         .box {
             flex-direction: column;
             gap: 60px;
@@ -151,22 +150,47 @@
             .rightBox {
                 width: 100% !important;
             }
+
             .location,
             .gmail,
             .logo,
             .linkList {
-                width: 50% !important;
+                max-width: 50% !important;
             }
+
             .gmailbox {
                 justify-content: flex-start !important;
             }
+
             .longPara {
                 padding-left: 0px !important;
-            }
-
-            .br {
-                display: block !important;
             }
         }
     }
 }
+
+@media screen and (max-width: 780px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .wrapperBox {
+            margin: 0px !important;
+
+            .box {
+
+                .leftBox,
+                .rightBox {
+                    max-width: 600px !important;
+                }
+                //Fix not Gmail responsive - tran width
+            }
+        }
+    }
+}
+
+// Setup mobile
+// @media screen and (max-width: 576px) {
+
+// }
