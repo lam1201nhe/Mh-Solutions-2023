@@ -5,6 +5,8 @@ import PartnerBox from "@/components/PartnerBox";
 import NewsBoxRebuild from "@/components/NewsBoxRebuild";
 import * as request from "@/utils/request";
 import { useState, useEffect } from "react";
+import SlidesProductList from "@/components/SlidesProductList";
+import styles from "@/styles/Home.module.scss";
 
 const styling = {
   paddingTop: "calc(708 / 1441 * 100%)",
@@ -26,7 +28,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Slides paddingTop={styling} checkNav={false} />
-      {/* <ProductBox items={data} /> */}
+      <ProductBox items={data} className={styles.productBox}/>
+      <div className={styles.slidesProductList}>
+      <SlidesProductList items={data} className={styles.slidesProductList} tiny/>
+      </div>
       <NewsBoxRebuild />
       <PartnerBox />
     </>

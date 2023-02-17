@@ -4,6 +4,7 @@ import React from "react";
 import NewsBoxRebuild from "@/components/NewsBoxRebuild";
 import FooterMobile from "@/components/FooterMobile";
 import SlidesPartnerMobile from "@/components/SlidesPartnerMobile";
+import SlidesProductList from "@/components/SlidesProductList";
 
 const Introduce = () => {
   return (
@@ -11,6 +12,8 @@ const Introduce = () => {
       <Link href="/">Home</Link>
       {/* <NewsBoxRebuild /> */}
       <SlidesPartnerMobile />
+      {/* <SlidesProductList /> */}
+
     </div>
   );
 };

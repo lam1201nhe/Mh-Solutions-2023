@@ -1,79 +1,53 @@
-import React, { useRef, useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./slidesproductlist.module.scss";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/autoplay";
+import "swiper/css/pagination";
 
-// import required modules
-import { Navigation, Autoplay } from "swiper";
-
-const SlidesPartner = () => {
+import { Pagination } from "swiper";
+import Tinybox from "../TinyBox";
+import styles from "./slidesproductlist.module.scss";
+import MarginBox from "../Marginbox";
+const SlidesProductList = ({ items, className, tinyBox }) => {
   return (
-    <div>
-      <Swiper
-        slidesPerView={2}
-        spaceBetween={10}
-        navigation={true}
-        loop={true}
-        autoplay={true}
-        breakpoints={{
-          567: {
-            slidesPerView: 3,
-            spaceBetween: 90,
-          },
-          768: {
-            slidesPerView: 4,
-            spaceBetween: 70,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 50,
-          },
-        }}
-        modules={[ Navigation, Autoplay]}
-        className={styles.slide}
-      >
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/boyte.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/amazon.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/phuyenyte.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/edupia.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/osam.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/sphacy.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/vietsens.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className={styles.img} style={{width: '100%',objectFit: 'contain'}} src="img/doitac.png" />
-        </SwiperSlide>
-        
-        
-        
-      </Swiper>
+    <div className={styles.container}>
+      <MarginBox className={styles.wrapperBox}>
+        <h1>Sản Phẩm</h1>
+        <Swiper
+          slidesPerView={2}
+          spaceBetween={0}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          className={`${styles.swiper} ${className}`}
+          breakpoints={{
+            390: {
+              slidesPerView: 1,
+              spaceBetween: 0,
+            },
+          }}
+        >
+          {items.map((item) => (
+            <SwiperSlide
+              style={{ width: "fit-content" }}
+              className={styles.swiperSlide}
+            >
+              <Tinybox
+                className={tinyBox}
+                key={item.id}
+                title={item.title}
+                content={item.content}
+                src={item.src_image}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </MarginBox>
     </div>
   );
 };
 
-export default SlidesPartner;
+export default SlidesProductList;

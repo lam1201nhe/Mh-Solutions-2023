@@ -38,11 +38,11 @@ const SlidesPartner = () => {
         modules={[Navigation, Autoplay]}
         className={styles.slide}
       >
-        {partnerList.map((item, index) => (
+        {partnerList.map((item) => (
           <SwiperSlide key={item.id}>
             <img
               className={styles.img}
-              style={{ width: "100%", objectFit: "contain" }}
+              style={item.style ? item.style : { width: "100%", height: '100%'}}
               src={item.src}
             />
           </SwiperSlide>

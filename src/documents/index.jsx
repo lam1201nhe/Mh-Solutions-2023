@@ -99,15 +99,27 @@ export const partnerList = [
         id: 10,
         name: "mobifone",
         src: "img/mobifone.png",
+        style: {
+            width: "100%",
+            height: '100px'
+        }
     },
     {
         id: 11,
-        name: "mobifone",
+        name: "mb",
         src: "img/mb.png",
+        style: {
+            width: '70%',
+            height: '80%'
+        }
     },
     {
         id: 12,
         name: "senvang",
         src: "img/senvang.png",
+        style: {
+            width: '100%',
+            height: '110px'
+        }
     },
 ]

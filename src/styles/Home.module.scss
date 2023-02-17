@@ -1,0 +1,13 @@
+.slidesProductList {
+    display: none;
+}
+
+@media screen and (max-width: 795px) {
+    .slidesProductList {
+        display: block !important;
+    }
+
+    .productBox {
+        display: none !important;
+    }
+}

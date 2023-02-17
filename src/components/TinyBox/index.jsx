@@ -2,9 +2,9 @@ import React from "react";
 import Card from "../Card";
 import styles from "./tinybox.module.scss";
 
-const Tinybox = ({ title, content, src }) => {
+const Tinybox = ({ title, content, src, className }) => {
   return (
-    <div className={styles.tinybox}>
+    <div className={`${styles.tinybox} ${className}`}>
       <Card
         title={title}
         content={content}

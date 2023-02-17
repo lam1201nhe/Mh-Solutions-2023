@@ -4,10 +4,10 @@ import CenterBox from '../Centerbox'
 import ProductList from '../ProductList'
 import BlackTitle from '@/core/Blacktitle'
 
-const ProductBox = ({items}) => {
+const ProductBox = ({items, className}) => {
   console.log(items)
   return (
-    <div className={styles.home}>
+    <div className={`${styles.home} ${className}`}>
         <BlackTitle content="Sản Phẩm" />
         <CenterBox>
           <ProductList items={items}/>
