@@ -1,9 +1,9 @@
-import Link from "next/link";
+// import Link from "next/link";
 
-const Link = (props) => {
-    const { href, ...rest } = props;
+// const Link = (props) => {
+//     const { href, ...rest } = props;
     
-    return <Link href={href} {...rest}/>
-}
+//     return <Link href={href} {...rest}/>
+// }
 
-export default Link;
+// export default Link;

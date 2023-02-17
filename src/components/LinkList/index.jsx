@@ -1,10 +1,9 @@
 import React from "react";
 import styles from "./linklist.module.scss";
-import { links, dropdownProduct } from "@/documents";
+import { links } from "@/documents";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { AiOutlineDown } from "react-icons/ai";
 import { Dropdown, Space } from "antd";
 
 const items = [
