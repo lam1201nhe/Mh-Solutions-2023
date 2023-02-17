@@ -35,67 +35,9 @@
             }
 
             .rightBoxInside {
-                height: 406px;
                 display: flex;
                 flex-direction: column;
                 gap: 23px;
-
-                .information {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 12px;
-
-
-                    .title,
-                    .content {
-                        word-wrap: break-word;
-                        display: -webkit-box;
-                        -webkit-box-orient: vertical;
-                        overflow: hidden;
-                        max-width: 305px;
-                        word-spacing: 2px ;
-                        letter-spacing: 1.5px !important;
-
-                    }
-
-                    .content {
-                        -webkit-line-clamp: 4;
-                        line-height: 20px;
-                        height: 80px;
-                        font-weight: 400;
-                        font-size: 14px;
-                        letter-spacing: 0.5px;
-                    }
-
-                    .title {
-                        -webkit-line-clamp: 2;
-                        line-height: 24px;
-                        height: 45px;
-                        font-weight: 700;
-                        font-size: 16px;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                    }
-
-                    .days {
-                        color: #888888;
-                        font-weight: 400;
-                        font-size: 14px;
-                        letter-spacing: 0.5px;
-                    }
-                }
-
-
-                .rightBoxInside_up,
-                .rightBoxInside_down {
-                    height: 47.5%;
-                    display: flex;
-                    gap: 12px;
-
-                    .img {
-                        max-width: 297px !important;
-                    }
-                }
 
                 .all {
                     height: 5%;
@@ -119,6 +61,7 @@
             font-size: 20px !important;
             line-height: 32px !important;
         }
+
         .boxInside {
             flex-direction: column;
 
@@ -127,33 +70,8 @@
                 width: 100% !important;
             }
 
-            .rightBoxInside {
-                .title,
-                .content {
-                    max-width: 100% !important;
-                    
-                }
-            }
+            
         }
     }
 }
 
-@media screen and (max-width: 590px) {
-    .rightBoxInside {
-        .content {
-            display: none !important;
-        }
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .rightBoxInside {
-
-        .rightBoxInside_down, 
-        .rightBoxInside_up {
-            .img {
-                width: 50%  !important;
-            }
-        }
-    }
-}

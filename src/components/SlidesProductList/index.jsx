@@ -10,41 +10,48 @@ import { Pagination } from "swiper";
 import Tinybox from "../TinyBox";
 import styles from "./slidesproductlist.module.scss";
 import MarginBox from "../Marginbox";
-const SlidesProductList = ({ items, className, tinyBox }) => {
+import LoadingIcon from "@/core/LoadingIcon";
+const SlidesProductList = ({ items, className, tinyBox, isLoading }) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <MarginBox className={styles.wrapperBox}>
         <h1>Sản Phẩm</h1>
-        <Swiper
-          slidesPerView={2}
-          spaceBetween={0}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          className={`${styles.swiper} ${className}`}
-          breakpoints={{
-            390: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-          }}
-        >
-          {items.map((item) => (
-            <SwiperSlide
-              style={{ width: "fit-content" }}
-              className={styles.swiperSlide}
-            >
-              <Tinybox
-                className={tinyBox}
+        {isLoading ? (
+          <LoadingIcon />
+        ) : (
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={20}
+            pagination={{
+              clickable: true,
+            }}
+            modules={[Pagination]}
+            centeredSlides={true}
+            centerInsufficientSlides={true}
+            breakpoints={{
+              620: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
+            className="mySwiper"
+          >
+            {items.map((item) => (
+              <SwiperSlide
+                style={{ width: "fit-content" }}
+                className={styles.swiperSlide}
                 key={item.id}
-                title={item.title}
-                content={item.content}
-                src={item.src_image}
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+              >
+                <Tinybox
+                  className={tinyBox}
+                  title={item.title}
+                  content={item.content}
+                  src={item.src_image}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        )}
       </MarginBox>
     </div>
   );

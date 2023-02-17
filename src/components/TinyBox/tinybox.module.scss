@@ -8,14 +8,12 @@
     color: $neutral-1;
     background: $neutral-5;
     transition: all .5s ease-in-out;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
 
     &:hover {
 
         color: $neutral-5;
-        // background: linear-gradient(96.61deg, #FF4E16 2.13%, #FB6535 96.62%);
         background: #FF6E31;
-
-
         .slide {
             display: none;
         }

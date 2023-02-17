@@ -1,7 +1,5 @@
 .container {
     width: 100%;
-    margin: 480px 0px 0px 0px;
-
     .wrapperBox {
         padding: 76px 0px 66px 0px;
         width: 100%;
@@ -16,48 +14,6 @@
             letter-spacing: 1px;
             text-transform: uppercase;
             padding-bottom: 36px;
-
-        }
-
-        .swiper {
-            width: 100%;
-
-            .swiperSlide {
-                margin: 0px 5px;
-                width: 55% !important;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 590px) {
-    .container {
-        .wrapperBox {
-            h1 {
-                padding-bottom: 28px !important;
-            }
-
-            .swiper {
-                .swiperSlide {
-                    margin-right: 100px !important;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 390px) {
-    .container {
-        margin: 380px 0px 0px 0px !important;
-
-        .wrapperBox {
-            padding: 76px 0px 66px 0px !important;
-
-            .swiper {
-                .swiperSlide {
-                    margin-right: 100px !important;
-                }
-            }
         }
     }
 }

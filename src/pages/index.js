@@ -4,7 +4,7 @@ import Slides from "@/components/Slides";
 import PartnerBox from "@/components/PartnerBox";
 import NewsBoxRebuild from "@/components/NewsBoxRebuild";
 import * as request from "@/utils/request";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import SlidesProductList from "@/components/SlidesProductList";
 import styles from "@/styles/Home.module.scss";
 
@@ -13,12 +13,26 @@ const styling = {
 };
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(false);
   const [data, setData] = useState([]);
-  useEffect(() => {
-    request.post("home-page/search").then((res) => {
-      setData(res?.items);
-    });
+
+  //useCallBack to help dependencies in useEffect
+  const fetchData = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      const response = await request.post("home-page/search");
+      setData(response?.items || []);
+    } catch (err) {
+      console.log(err);
+    } finally {
+      setIsLoading(false);
+    }
   }, []);
+  useEffect(() => {
+    fetchData();
+
+    //[fetchData] in dependencies need the help of useCallBack
+  }, [fetchData]);
   return (
     <>
       <Head>
@@ -27,13 +41,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Slides paddingTop={styling} checkNav={false} />
-      <ProductBox items={data} className={styles.productBox}/>
-      <div className={styles.slidesProductList}>
-      <SlidesProductList items={data} className={styles.slidesProductList} tiny/>
-      </div>
-      <NewsBoxRebuild />
-      <PartnerBox />
+      <>
+        <Slides paddingTop={styling} checkNav={false} />
+        <ProductBox items={data} className={styles.productBox} isLoading={isLoading}/>
+        <SlidesProductList items={data} className={styles.slidesProductList} isLoading={isLoading}/>
+        <NewsBoxRebuild />
+        <PartnerBox />
+      </>
+      
     </>
   );
 }

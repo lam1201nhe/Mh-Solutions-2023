@@ -1,0 +1,16 @@
+Use to call api from Server
+// export const getStaticPath = async (context) => {
+
+// }
+
+// export const getStaticProps = async (context) => {
+//   return {
+//   props: {}
+// }
+// }
+// export const getServerSideProps = async (context) => {
+//   console.log(context);
+//   return {
+//     props: {}
+//   }
+// }
