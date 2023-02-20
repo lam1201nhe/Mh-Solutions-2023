@@ -4,6 +4,7 @@
     width: 233px;
     margin: 32px auto;
     text-align: center;
+    // transition: all .5s ease-in-out;
 
     .button {
         margin: 40px auto 32px auto;
@@ -11,9 +12,4 @@
         border-radius: 2px;
         border: none;
     }
-}
-
-.card:hover {
-    color: $neutral-5;
-
 }

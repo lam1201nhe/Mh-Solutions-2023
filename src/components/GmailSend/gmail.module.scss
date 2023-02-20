@@ -7,6 +7,7 @@
         font-weight: 400;
         padding: 16px;
         gap: 10px;
+        outline: none;
 
     }
 
@@ -23,21 +24,3 @@
     }
 }
 
-// Switch to footerMobile
-@media screen and (max-width: 600px) {
-    // .gmail {
-    //     width: 60% !important;
-
-        
-    //     .button, .input {
-    //         padding: 12px !important;
-    //         font-size: 12px !important;
-    //     }
-    // }
-    
-
-
-
-
-
-}

@@ -3,12 +3,16 @@
     height: 47.5%;
     display: flex;
     gap: 12px;
+    cursor: pointer;
+
+    .img {
+        max-width: 297px !important;
+    }
 
     .information {
         display: flex;
         flex-direction: column;
         gap: 12px;
-
 
         .title,
         .content {
@@ -19,6 +23,7 @@
             max-width: 305px;
             word-spacing: 2px;
             letter-spacing: 1.5px !important;
+            cursor: pointer;
 
         }
 
@@ -49,13 +54,12 @@
         }
     }
 
-    .img {
-        max-width: 297px !important;
-    }
+    
 }
 
 @media screen and (max-width: 950px) {
     .rightBoxInside {
+
         .title,
         .content {
             max-width: 100% !important;

@@ -1,5 +1,7 @@
 .slide {
-
+    .img {
+        object-fit: contain;
+    }
     @media screen and (max-width: 620px) {
         .img{
             width: 100px;
